@@ -2,7 +2,6 @@ package accounting.controller;
 
 import java.util.List;
 
-import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -117,6 +116,7 @@ public class AccountController {
 						.anyMatch(authory -> authory.getAuthority().equals("ROLE_ADMIN"));
 			}
 		}
+		return false;
 	}
 
 }
